@@ -11,7 +11,7 @@ services: #Declaramos los contenedores y servicios a utilizar
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_DATABASE: wordpress
       MYSQL_PASSWORD: wordpress
-    #container_name: bd #le damos nombre único, si no, docker da ID y nombre aleatorios
+    container_name: bd #le damos nombre único, si no, docker da ID y nombre aleatorios
 
   wordpress: #Definimos el contenedor de Wordpress
     depends_on: #De qué contenedores depende
@@ -24,7 +24,7 @@ services: #Declaramos los contenedores y servicios a utilizar
       WORDPRESS_DB_HOST: basededatos:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
-    #container_name: wp
+    container_name: wp
  
   phpmyadmin: #Definimos el contenedor de phpMyAdmin
    depends_on: #De qué contenedores depende
@@ -38,4 +38,4 @@ services: #Declaramos los contenedores y servicios a utilizar
     MYSQL_USER: wordpress
     MYSQL_PASSWORD: wordpress
     MYSQL_ROOT_PASSWORD: wordpress
-   #container_name: pma
+   container_name: pma
