@@ -23,7 +23,8 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 8. Una vez **dentro del contenedor** escribimos: `(echo php_value upload_max_filesize 250M; echo php_value post_max_size 250M; echo php_value memory_limit 512M; echo php_value max_execution_time 400; echo php_value max_input_time 400) >> .htaccess`
 9. Ahora podemos **importar** con el plugin previamente instalado el entorno configurado, hay que descomprimir el [".wpress"](https://github.com/cil00001/wpwooecommerce/tree/master/Backup%26Migration/MigrationFile_All-in-One%20WP%20Migration).
 10. Una vez importado, **recargamos** la página y tendremos que acceder con el [usuario](https://github.com/cil00001/wpwooecommerce/blob/master/Backup%26Migration/Acceso) del entorno de desarrollo, nos olvidamos del temporal.
-11. ¡Ya tendremos nuestra tienda online lista! 
+11. Si queremos gestionar la base de datos MySQL, podemos acceder a phpMyAdmin: `127.0.0.1:8084' 
+12. ¡Ya tendremos nuestra tienda online lista! 
 
 ## Bugs
 
@@ -39,4 +40,4 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 - Una vez dentro le damos a la izquierda a "+ADD NEW INSTANCE".
 - Arrastramos el fichero **[“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml)** hasta la terminal para subirlo.
 - Lo lanzamos con `docker-compose up -d`
-- Arriba nos saldrán los puertos activos. Nos interesa el **8080**, si lo pulsamos vamos a la instalación de WordPress y desde ahí podemos seguir los pasos antes citados del 5 al 10.
+- Arriba nos saldrán los puertos activos. Nos interesan el **8080** y el **8084**, si pulsamos el primero vamos a la instalación de WordPress y desde ahí podemos seguir los pasos antes citados del 5 al 11 o directamente a phpMyAdmin con el 8084.
