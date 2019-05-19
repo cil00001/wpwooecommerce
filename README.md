@@ -5,7 +5,7 @@ Este repositorio ha sido creado como parte de un trabajo de fin de Grado de Info
 
 La **idea principal** es conseguir una base para una tienda online, fabricada con contenido gratuito y funcional, apoyado por una gran comunidad de desarrolladores y usuarios que asegure que se siga actualizando y no quede obsoleta en poco tiempo.  
 
-Utilizando el archivo **[“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml)** lanzaremos unos contenedores donde trabajar para llegar a esa base. Una vez esté todo configurado, obtendremos un archivo con ayuda de un plugin que nos permitirá **migrar** nuestro sitio a otro donde despleguemos el fichero “.yml”.
+Utilizando el archivo [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) lanzaremos unos contenedores donde trabajar para llegar a esa base. Una vez esté todo configurado, obtendremos un archivo con ayuda de un plugin que nos permitirá **migrar** nuestro sitio a otro donde despleguemos el fichero “.yml”.
 
 Para llevar a cabo este proyecto pondremos en marcha un servidor con **WordPress** , su base de datos  **MySQL**  y para gestionarla **phpMyAdmin** , e instalaremos los **plugins** y **temas** que hallemos más interesantes, además de **configurar el sitio** siguiendo unas pautas que respeten la accesibilidad, un diseño responsive, el Reglamento General de Protección de Datos y la seguridad del sitio web. Cuando tengamos todo, crearemos distintos archivos de **backup y migración** para poder llevarlo a otras plataformas y probarlo con Docker.
 
@@ -13,7 +13,7 @@ Para llevar a cabo este proyecto pondremos en marcha un servidor con **WordPress
 
 Testeado en Windows 10 y Ubuntu 18.04 LTS.
 
-1. Copiamos el archivo **[“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml)** en nuestro PC.
+1. Copiamos el archivo [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) en nuestro PC.
 2. Abrimos la **consola** y navegamos hasta la ubicación del fichero: `cd ruta_del_yml`
 3. Ejecutamos el ".yml" en modo background (-d): `docker-compose up -d`
 4. Vamos al **navegador** y escribimos: `127.0.0.1:8080`
@@ -25,6 +25,10 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 10. Una vez importado, **recargamos** la página y tendremos que acceder con el [usuario](https://github.com/cil00001/wpwooecommerce/blob/master/Backup%26Migration/Acceso) del entorno de desarrollo, nos olvidamos del temporal.
 11. Si queremos gestionar la base de datos MySQL, podemos acceder a phpMyAdmin: `127.0.0.1:8084` 
 12. ¡Ya tendremos nuestra tienda online lista! 
+
+## Vídeos de funcionamiento
+
+Aquí podéis ver algunos [vídeos](https://drive.google.com/open?id=10EOfHWG3OKoM1ptfs6G9m8H4DWsCzmpp) del despliegue y rendimiento de este proyecto en Ubuntu 18.04 LTS y Windows 10.
 
 ## Bugs
 
@@ -38,6 +42,6 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 - Accedemos con nuestro usuario de DockerHub.
 - Le damos a "Start" para crear una nueva sesión, que tendremos durante 4 horas activa.
 - Una vez dentro le damos a la izquierda a "+ADD NEW INSTANCE".
-- Arrastramos el fichero **[“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml)** hasta la terminal para subirlo.
+- Arrastramos el fichero [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) hasta la terminal para subirlo.
 - Lo lanzamos con `docker-compose up -d`
 - Arriba nos saldrán los puertos activos. Nos interesan el **8080** y el **8084**, si pulsamos el primero vamos a la instalación de WordPress y desde ahí podemos seguir los pasos antes citados del 5 al 11 o directamente a phpMyAdmin con el 8084.
