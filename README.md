@@ -19,7 +19,7 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 4. Vamos al **navegador** y escribimos: `127.0.0.1:8080`
 5. Instalamos **WordPress** con unos datos de acceso provisionales ya que al migrar tendremos los datos del entorno de desarrollo.
 6. Instalamos y activamos el plugin **All-in-One WP Migration**.
-7. Volvemos a la **terminal** y entramos en el contenedor con: `docker container exec –it wp bash`
+7. Volvemos a la **terminal** y entramos en el contenedor con: `docker container exec -it wp bash`
 8. Una vez **dentro del contenedor** escribimos: `(echo php_value upload_max_filesize 250M; echo php_value post_max_size 250M; echo php_value memory_limit 512M; echo php_value max_execution_time 400; echo php_value max_input_time 400) >> .htaccess`
 9. Ahora podemos **importar** con el plugin previamente instalado el entorno configurado, hay que descomprimir el [".wpress"](https://github.com/cil00001/wpwooecommerce/tree/master/Backup%26Migration/MigrationFile_All-in-One%20WP%20Migration).
 10. Una vez importado, **recargamos** la página y tendremos que acceder con el [usuario](https://github.com/cil00001/wpwooecommerce/blob/master/Backup%26Migration/Acceso) del entorno de desarrollo, nos olvidamos del temporal.
