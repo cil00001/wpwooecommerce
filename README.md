@@ -7,31 +7,33 @@ La **idea principal** es conseguir una base para una tienda online, fabricada co
 
 Utilizando el archivo [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) lanzaremos unos contenedores donde trabajar para llegar a esa base. Una vez esté todo configurado, obtendremos un archivo con ayuda de un plugin que nos permitirá **migrar** nuestro sitio a otro donde despleguemos el fichero “.yml”.
 
-Para llevar a cabo este proyecto pondremos en marcha un servidor con **WordPress** , su base de datos  **MySQL**  y para gestionarla **phpMyAdmin** , e instalaremos los **plugins** y **temas** que hallemos más interesantes, además de **configurar el sitio** siguiendo unas pautas que respeten la accesibilidad, un diseño responsive, el Reglamento General de Protección de Datos y la seguridad del sitio web. Cuando tengamos todo, crearemos distintos archivos de **backup y migración** para poder llevarlo a otras plataformas y probarlo con Docker.
+Para llevar a cabo este proyecto pondremos en marcha un servidor con las siguientes imágenes oficiales de Docker Hub: **[WordPress](https://hub.docker.com/_/wordpress)** , su base de datos  **[MySQL](https://hub.docker.com/_/mysql)**  y para gestionarla **[phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin)** . Instalaremos los **plugins** y **temas** que hallemos más interesantes desde el repositorio oficial, además de **configurar el sitio** siguiendo unas pautas que respeten la accesibilidad, un diseño responsive, el Reglamento General de Protección de Datos y la seguridad del sitio web. 
+
+Cuando tengamos todo, crearemos distintos archivos de **backup y migración** para poder llevarlo a otras plataformas y probarlo con Docker.
 
 ### Listado de plugins y themes.
 
 Hemos instalado y configurado estos 15 **plugins**:
-- WooCommerce.
-- MailChimp.
-- Jetpack.
-- WP Accessibility.
-- GDPR.
-- iThemes Security.
-- UpdraftPlus WordPress Backup Plugin.
-- Yoast SEO.
-- Smush Image Compression and Optimization.
-- Broken LInk Checker.
-- WP Super Cache.
-- Easy Social Icons.
-- Contact Form 7.
-- WP Mail SMTP by WPForms.
-- All-in-One WP Migration.
+- [WooCommerce](https://es.wordpress.org/plugins/woocommerce/)
+- [MailChimp](https://es.wordpress.org/plugins/woocommerce-mailchimp/)
+- [Jetpack](https://es.wordpress.org/plugins/jetpack/)
+- [WP Accessibility](https://es.wordpress.org/plugins/wp-accessibility/)
+- [GDPR](https://es.wordpress.org/plugins/gdpr/)
+- [iThemes Security](https://es.wordpress.org/plugins/better-wp-security/)
+- [UpdraftPlus WordPress Backup Plugin](https://es.wordpress.org/plugins/updraftplus/)
+- [Yoast SEO](https://es.wordpress.org/plugins/wordpress-seo/)
+- [Smush Image Compression and Optimization](https://es.wordpress.org/plugins/wp-smushit/)
+- [Broken LInk Checker](https://es.wordpress.org/plugins/broken-link-checker/)
+- [WP Super Cache](https://es.wordpress.org/plugins/wp-super-cache/)
+- [Easy Social Icons](https://es.wordpress.org/plugins/easy-social-icons/)
+- [Contact Form 7](https://es.wordpress.org/plugins/contact-form-7/)
+- [WP Mail SMTP by WPForms](https://es.wordpress.org/plugins/wp-mail-smtp/)
+- [All-in-One WP Migration](https://es.wordpress.org/plugins/all-in-one-wp-migration/)
 
 Y 3 **themes**:
-- Storefront (Activo).
-- GeneratePress.
-- Shop Isle.
+- [Storefront](https://es.wordpress.org/themes/storefront/) (Activo)
+- [GeneratePress](https://es.wordpress.org/themes/generatepress/)
+- [Shop Isle](https://es.wordpress.org/themes/shop-isle/)
 
 ## Instrucciones para desplegar el entorno
 
@@ -50,14 +52,6 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 11. Si queremos gestionar la base de datos MySQL, podemos acceder a phpMyAdmin: `127.0.0.1:8084` 
 12. ¡Ya tendremos nuestra tienda online lista! 
 
-## Vídeos de funcionamiento
-
-Aquí podéis ver algunos [vídeos](https://drive.google.com/open?id=10EOfHWG3OKoM1ptfs6G9m8H4DWsCzmpp) del despliegue y rendimiento de este proyecto en Ubuntu 18.04 LTS y Windows 10.
-
-## Bugs
-
-- Es posible que los enlaces permanentes se desconfiguren al migrar, el plugin da la opción de revisarlos, si no, vamos a "Ajustes/Enlaces Permanentes/" y seleccionamos "Personalizado: %postname%".
-
 ## ¿Puedo probarlo sin instalar Docker?
 
 ¡¡Sí!! hay una web que nos permite jugar con Docker sin tener que instalar nada, solo necesitaremos un usuario en [DockerHub](https://hub.docker.com/).
@@ -69,3 +63,11 @@ Aquí podéis ver algunos [vídeos](https://drive.google.com/open?id=10EOfHWG3OK
 5. Arrastramos el fichero [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) hasta la terminal para subirlo.
 6. Lo lanzamos con `docker-compose up -d`
 7. Arriba nos saldrán los puertos activos. Nos interesan el **8080** y el **8084**, si pulsamos el primero vamos a la instalación de WordPress y desde ahí podemos seguir los pasos 5-11 antes citados  en el despliegue. También podemos ir a phpMyAdmin con el 8084.
+
+## Vídeos de muestra y rendimiento
+
+Aquí podéis ver algunos [vídeos](https://drive.google.com/open?id=10EOfHWG3OKoM1ptfs6G9m8H4DWsCzmpp) del despliegue y rendimiento de este proyecto en Ubuntu 18.04 LTS y Windows 10.
+
+## Problemas conocidos
+
+- Es posible que los enlaces permanentes se desconfiguren al migrar, el plugin da la opción de revisarlos, si no, vamos a "Ajustes/Enlaces Permanentes/" y seleccionamos "Personalizado: %postname%".
