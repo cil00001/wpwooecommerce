@@ -9,7 +9,7 @@ Utilizando el archivo [“docker-compose.yml”](https://github.com/cil00001/wpw
 
 Para llevar a cabo este proyecto pondremos en marcha un servidor con las siguientes imágenes oficiales de Docker Hub: **[WordPress](https://hub.docker.com/_/wordpress)** , su base de datos  **[MySQL](https://hub.docker.com/_/mysql)**  y para gestionarla **[phpMyAdmin](https://hub.docker.com/r/phpmyadmin/phpmyadmin)** . Instalaremos los **plugins** y **temas** que hallemos más interesantes desde el repositorio oficial, además de **configurar el sitio** siguiendo unas pautas que respeten la accesibilidad, un diseño responsive, el Reglamento General de Protección de Datos y la seguridad del sitio web. 
 
-Cuando tengamos todo, crearemos distintos archivos de **backup y migración** para poder llevarlo a otras plataformas y probarlo con Docker.
+Cuando tengamos todo, crearemos distintos archivos de **[backup y migración](https://github.com/cil00001/wpwooecommerce/tree/master/Backup%26Migration)** para poder llevarlo a otras plataformas y probarlo con Docker.
 
 ### Listado de plugins y themes.
 
