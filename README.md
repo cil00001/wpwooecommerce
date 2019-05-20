@@ -9,6 +9,30 @@ Utilizando el archivo [“docker-compose.yml”](https://github.com/cil00001/wpw
 
 Para llevar a cabo este proyecto pondremos en marcha un servidor con **WordPress** , su base de datos  **MySQL**  y para gestionarla **phpMyAdmin** , e instalaremos los **plugins** y **temas** que hallemos más interesantes, además de **configurar el sitio** siguiendo unas pautas que respeten la accesibilidad, un diseño responsive, el Reglamento General de Protección de Datos y la seguridad del sitio web. Cuando tengamos todo, crearemos distintos archivos de **backup y migración** para poder llevarlo a otras plataformas y probarlo con Docker.
 
+###### Listado de plugins y themes.
+
+Hemos instalado y configurado estos 15 **plugins**:
+- WooCommerce.
+- MailChimp.
+- Jetpack.
+- WP Accessibility.
+- GDPR.
+- iThemes Security.
+- UpdraftPlus WordPress Backup Plugin.
+- Yoast SEO.
+- Smush Image Compression and Optimization.
+- Broken LInk Checker.
+- WP Super Cache.
+- Easy Social Icons.
+- Contact Form 7.
+- WP Mail SMTP by WPForms.
+- All-in-One WP Migration.
+
+Y 3 **themes**:
+- Storefront (Activo).
+- GeneratePress.
+- Shop Isle.
+
 ## Instrucciones para desplegar el entorno
 
 Testeado en Windows 10 y Ubuntu 18.04 LTS.
@@ -38,10 +62,10 @@ Aquí podéis ver algunos [vídeos](https://drive.google.com/open?id=10EOfHWG3OK
 
 ¡¡Sí!! hay una web que nos permite jugar con Docker sin tener que instalar nada, solo necesitaremos un usuario en [DockerHub](https://hub.docker.com/).
 
-- Vamos a la web de [Play with Docker](https://labs.play-with-docker.com/#).
-- Accedemos con nuestro usuario de DockerHub.
-- Le damos a "Start" para crear una nueva sesión, que tendremos durante 4 horas activa.
-- Una vez dentro le damos a la izquierda a "+ADD NEW INSTANCE".
-- Arrastramos el fichero [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) hasta la terminal para subirlo.
-- Lo lanzamos con `docker-compose up -d`
-- Arriba nos saldrán los puertos activos. Nos interesan el **8080** y el **8084**, si pulsamos el primero vamos a la instalación de WordPress y desde ahí podemos seguir los pasos antes citados del 5 al 11 o directamente a phpMyAdmin con el 8084.
+1. Vamos a la web de [Play with Docker](https://labs.play-with-docker.com/#).
+2. Accedemos con nuestro usuario de DockerHub.
+3. Le damos a "Start" para crear una nueva sesión, que tendremos durante 4 horas activa.
+4. Una vez dentro le damos a la izquierda a "+ADD NEW INSTANCE".
+5. Arrastramos el fichero [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/master/docker-compose.yml) hasta la terminal para subirlo.
+6. Lo lanzamos con `docker-compose up -d`
+7. Arriba nos saldrán los puertos activos. Nos interesan el **8080** y el **8084**, si pulsamos el primero vamos a la instalación de WordPress y desde ahí podemos seguir los pasos 5-11 antes citados  en el despliegue. También podemos ir a phpMyAdmin con el 8084.
