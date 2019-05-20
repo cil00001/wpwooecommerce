@@ -9,7 +9,7 @@ Utilizando el archivo [“docker-compose.yml”](https://github.com/cil00001/wpw
 
 Para llevar a cabo este proyecto pondremos en marcha un servidor con **WordPress** , su base de datos  **MySQL**  y para gestionarla **phpMyAdmin** , e instalaremos los **plugins** y **temas** que hallemos más interesantes, además de **configurar el sitio** siguiendo unas pautas que respeten la accesibilidad, un diseño responsive, el Reglamento General de Protección de Datos y la seguridad del sitio web. Cuando tengamos todo, crearemos distintos archivos de **backup y migración** para poder llevarlo a otras plataformas y probarlo con Docker.
 
-###### Listado de plugins y themes.
+### Listado de plugins y themes.
 
 Hemos instalado y configurado estos 15 **plugins**:
 - WooCommerce.
