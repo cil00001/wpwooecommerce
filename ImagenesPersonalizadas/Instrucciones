@@ -1,0 +1,19 @@
+1. docker build . //En carpeta mysql-novol y wp-novol
+
+2. docker image tag nombreImagen //Para las 2
+
+3. // docker-compose.yml llamando a las imagenes propias de mysql y wp
+
+4. docker-compose up -d 
+
+5. // Instalación/Migración
+
+6. docker-compose stop
+
+7. docker commit IDcontenedor cil00001/nombreImagenDatos //Para los 2
+
+8. docker push cil00001/nombreImagenDatos:x.x //Para los 2
+
+9. // Vamos a otro sitio
+
+10. docker-compose up -d //con docker-compose.yml a esas imagenes con datos
