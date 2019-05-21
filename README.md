@@ -59,7 +59,7 @@ Testeado en Windows 10 y Ubuntu 18.04 LTS.
 5. Arrastramos el fichero [“docker-compose.yml”](https://github.com/cil00001/wpwooecommerce/blob/data-container-mode/docker-compose.yml) hasta la terminal para subirlo.
 6. Lo lanzamos con `docker-compose up -d`
 7. Arriba nos saldrán los puertos activos. Nos interesan el **8080** y el **8084**.
-8. Como ha sido desarrollado en localhost:8080, tendremos que ir a phpMyAdmin y cambiar la dirección del sitio a la que nos proporcione la web.
+8. Como ha sido desarrollado en **localhost:8080**, tendremos que ir a phpMyAdmin y [cambiar la dirección del sitio](https://github.com/cil00001/wpwooecommerce/blob/data-container-mode/Backup%26Migration/sql_query_url_update) a la que nos proporcione la web.
 
 ## Vídeos de muestra y rendimiento
 
@@ -67,5 +67,5 @@ Aquí podéis ver algunos [vídeos](https://drive.google.com/open?id=10EOfHWG3OK
 
 ## Problemas conocidos
 
-- Es posible que los enlaces permanentes se desconfiguren al migrar, el plugin da la opción de revisarlos, si no, vamos a "Ajustes/Enlaces Permanentes/" y seleccionamos "Personalizado: %postname%".
-- Con ayuda del plugin "Better Search Replace" podremos cambiar la dirección localhost:8080 por la que nos convenga en la base de datos.
+- Es posible que los **enlaces permanentes** se desconfiguren al migrar, el plugin da la opción de revisarlos, si no, vamos a "Ajustes/Enlaces Permanentes/" y seleccionamos "Personalizado: %postname%".
+- Con ayuda del plugin "Better Search Replace" podremos **cambiar la dirección** localhost:8080 por la que nos convenga en la base de datos.
