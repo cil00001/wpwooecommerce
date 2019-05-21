@@ -2,7 +2,7 @@ version: '3' #La versión del script YAML
 
 services: #Declaramos los contenedores y servicios a utilizar
   basededatos: #El definimos el contenedor que será la base de datos, cogiendo las siguientes imágenes
-    image: mysql:5.7
+    image: cil00001/wpwooecommerce_bd:2.0
     restart: always
     ports: #Puertos que se utilizarán host:huésped
       - 8081:3306
@@ -11,12 +11,12 @@ services: #Declaramos los contenedores y servicios a utilizar
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_DATABASE: wordpress
       MYSQL_PASSWORD: wordpress
-    container_name: bd #le damos nombre único, si no, docker da ID y nombre aleatorios
+    container_name: bd_with_data #le damos nombre único, si no, docker da ID y nombre aleatorios
 
   wordpress: #Definimos el contenedor de Wordpress
     depends_on: #De qué contenedores depende
       - basededatos
-    image: wordpress
+    image: cil00001/wpwooecommerce_wp:2.0
     restart: always
     ports:
       - 8080:80
@@ -24,7 +24,7 @@ services: #Declaramos los contenedores y servicios a utilizar
       WORDPRESS_DB_HOST: basededatos:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
-    container_name: wp
+    container_name: wp_with_data
  
   phpmyadmin: #Definimos el contenedor de phpMyAdmin
    depends_on: #De qué contenedores depende
@@ -38,4 +38,4 @@ services: #Declaramos los contenedores y servicios a utilizar
     MYSQL_USER: wordpress
     MYSQL_PASSWORD: wordpress
     MYSQL_ROOT_PASSWORD: wordpress
-   container_name: pma
+   container_name: pma_with_data
