@@ -2,7 +2,7 @@ version: '3' #La versión del script YAML
 
 services: #Declaramos los contenedores y servicios a utilizar
   basededatos: #El definimos el contenedor que será la base de datos, cogiendo las siguientes imágenes
-    image: cil00001/wpwooecommerce_bd:2.0
+    image: cil00001/wpwooecommerce_bd:3.0
     restart: always
     ports: #Puertos que se utilizarán host:huésped
       - 8081:3306
@@ -16,7 +16,7 @@ services: #Declaramos los contenedores y servicios a utilizar
   wordpress: #Definimos el contenedor de Wordpress
     depends_on: #De qué contenedores depende
       - basededatos
-    image: cil00001/wpwooecommerce_wp:2.0
+    image: cil00001/wpwooecommerce_wp:3.0
     restart: always
     ports:
       - 8080:80
